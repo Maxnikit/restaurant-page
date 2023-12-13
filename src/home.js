@@ -8,6 +8,7 @@ export function loadHome() {
   const hours = document.createElement("p");
   const location = document.createElement("p");
   const map = document.createElement("img");
+  const footer = document.querySelector("footer");
 
   homePage.id = "homePage";
   header.textContent = "Durrr Burger";
@@ -33,7 +34,7 @@ export function loadHome() {
   homePage.appendChild(hours);
   homePage.appendChild(location);
   homePage.appendChild(map);
-  content.appendChild(homePage);
+  content.insertBefore(homePage, footer);
   displayDays();
   function displayDays() {
     const hoursArray = [

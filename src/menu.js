@@ -2,12 +2,13 @@ export function loadMenu() {
   const content = document.getElementById("content");
   const menuPage = document.createElement("div");
   const header = document.createElement("h1");
+  const footer = document.querySelector("footer");
 
   menuPage.id = "menuPage";
   header.textContent = "Menu";
   menuPage.appendChild(header);
   displayMenu();
-  content.appendChild(menuPage);
+  content.insertBefore(menuPage, footer);
   function displayMenu() {
     const foodArray = [
       {

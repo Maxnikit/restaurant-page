@@ -6,9 +6,7 @@ export function loadContact() {
   const male = document.createElement("img");
   const invite = document.createElement("p");
   const details = document.createElement("ul");
-  const mail = document.createElement("a");
-  const phone = document.createElement("a");
-  const twitter = document.createElement("a");
+  const footer = document.querySelector("footer");
 
   contactPage.id = "contactPage";
   header.classList = "header";
@@ -22,22 +20,31 @@ export function loadContact() {
   invite.id = "invite";
   invite.textContent =
     "Want to become a part of the Durrr Burger family? Reach out to us today using the details below or swing by for a chat!";
-  mail.href = "mailto:durrr.burger@nosweat.com";
-  mail.textContent = "durrr.burger@nosweat.com";
-  phone.textContent = "+1 (555) 555-5555";
-  phone.href = "tel:+15555555555";
-  twitter.href = "https://twitter.com/durrr_burger";
-  twitter.textContent = "@durrr_burger";
   details.id = "details";
-  details.appendChild(mail);
-  details.appendChild(phone);
-  details.appendChild(twitter);
+  const links = [
+    {
+      href: "mailto:durrr.burger@nosweat.com",
+      textContent: "durrr.burger@nosweat.com",
+    },
+    { href: "tel:+15555555555", textContent: "+1 (555) 555-5555" },
+    { href: "https://twitter.com/durrr_burger", textContent: "@durrr_burger" },
+  ];
+
+  links.forEach((link) => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = link.href;
+    a.textContent = link.textContent;
+    li.appendChild(a);
+    details.appendChild(li);
+  });
 
   contactPage.appendChild(header);
   contactPage.appendChild(male);
   contactPage.appendChild(female);
   contactPage.appendChild(invite);
   contactPage.appendChild(details);
-  content.appendChild(contactPage);
+  content.insertBefore(contactPage, footer);
 }
 // TODO add details list
+// Create an array of link objects

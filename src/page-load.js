@@ -18,5 +18,9 @@ export function loadPage() {
   contactButton.id = "contact-button";
   navBar.appendChild(contactButton);
 
+  const footer = document.createElement("footer");
+  footer.textContent = "2023 | Made with ❤ by Maxnikit";
+
   content.appendChild(navBar);
+  content.appendChild(footer);
 }

@@ -9,6 +9,9 @@ loadHome();
 const homeButton = document.querySelector("#home-button");
 const menuButton = document.querySelector("#menu-button");
 const contactButton = document.querySelector("#contact-button");
+const homePage = document.querySelector("#homePage");
+const menuPage = document.querySelector("#menuPage");
+const contactPage = document.querySelector("#contactPage");
 
 homeButton.addEventListener("click", function () {
   console.log("home button clicked");
@@ -29,18 +32,6 @@ contactButton.addEventListener("click", function () {
 });
 
 function removeContent() {
-  const parent = document.querySelector("#content");
-  const homePage = document.querySelector("#homePage");
-  const menuPage = document.querySelector("#menuPage");
-  const contactPage = document.querySelector("#contactPage");
-
-  if (homePage) {
-    parent.removeChild(homePage);
-  }
-  if (menuPage) {
-    parent.removeChild(menuPage);
-  }
-  if (contactPage) {
-    parent.removeChild(contactPage);
-  }
+  const secondChild = document.querySelector("#content > *:nth-child(2)");
+  secondChild.remove();
 }
