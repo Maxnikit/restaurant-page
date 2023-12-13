@@ -1,14 +1,14 @@
 import { loadPage } from "./page-load";
 import { loadHome } from "./home";
 import { loadMenu } from "./menu";
-import { addButtons } from "./page-load";
+import { loadContact } from "./contact";
 import "./style.css";
 loadPage();
 loadHome();
 
 const homeButton = document.querySelector("#home-button");
 const menuButton = document.querySelector("#menu-button");
-// const aboutButton = document.querySelector("#about-web");
+const contactButton = document.querySelector("#contact-button");
 
 homeButton.addEventListener("click", function () {
   console.log("home button clicked");
@@ -22,11 +22,12 @@ menuButton.addEventListener("click", function () {
   loadMenu();
 });
 
-// aboutButton.addEventListener("click", function () {
-//   render();
-//   about();
-//   pageLoad();
-// });
+contactButton.addEventListener("click", function () {
+  console.log("contact button clicked");
+  removeContent();
+  loadContact();
+});
+
 function removeContent() {
   const parent = document.querySelector("#content");
   const currentPage = document.querySelector("currentPage");

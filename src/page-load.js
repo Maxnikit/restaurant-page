@@ -13,5 +13,10 @@ export function loadPage() {
   menuButton.id = "menu-button";
   navBar.appendChild(menuButton);
 
+  const contactButton = document.createElement("button");
+  contactButton.textContent = "Contact";
+  contactButton.id = "contact-button";
+  navBar.appendChild(contactButton);
+
   content.appendChild(navBar);
 }

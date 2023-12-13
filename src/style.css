@@ -1,9 +1,15 @@
+@font-face {
+  font-family: Fortnite;
+  src: url(../src/assets/fortnite.otf);
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Fortnite, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --primary-color: #f96c07;
   --secondary-color: #163a9b;
   --third-color: #1f50d6;
 }
+
 html {
   scrollbar-gutter: stable both-edges;
 }
@@ -44,6 +50,7 @@ currentPage {
   align-items: center;
   background-color: var(--third-color);
   color: white;
+  font-size: 30px;
 }
 body {
   background-color: var(--secondary-color);
@@ -80,7 +87,7 @@ body {
   grid-row-start: 2;
   grid-row-end: 3;
 }
-.menucard > price {
+.menu-card > price {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 3;
