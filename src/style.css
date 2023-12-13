@@ -1,4 +1,4 @@
-#content {
+currentPage {
   width: 800px;
   background-color: white;
   margin: 0 auto;
@@ -8,4 +8,31 @@
 }
 body {
   background-color: #163a9b;
+}
+.menu-card {
+  display: grid;
+  grid-template-columns: 250px 250px;
+  grid-template-rows: 40px 250px 40px;
+  width: 500px;
+  border: red 1px solid;
+  grid-gap: 10px;
+  padding: 10px;
+  margin-block: 10px;
+}
+.menu-card > h2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.menu-card > img {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 250px;
+}
+.menu-card > p {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }

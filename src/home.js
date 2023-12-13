@@ -1,5 +1,6 @@
 export function loadHome() {
   const content = document.getElementById("content");
+  const currentPage = document.createElement("currentPage");
   const header = document.createElement("h1");
   const image = document.createElement("img");
   const description = document.createElement("p");
@@ -13,9 +14,11 @@ export function loadHome() {
   hours.textContent = "Hours: 11am - 10pm";
   location.textContent = "Greasy Grove, Risky Reels, Retail Row";
 
-  content.appendChild(header);
-  content.appendChild(image);
-  content.appendChild(description);
-  content.appendChild(hours);
-  content.appendChild(location);
+  currentPage.appendChild(header);
+  currentPage.appendChild(image);
+  currentPage.appendChild(description);
+  currentPage.appendChild(hours);
+  currentPage.appendChild(location);
+
+  content.appendChild(currentPage);
 }

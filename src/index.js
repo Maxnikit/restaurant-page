@@ -28,9 +28,9 @@ menuButton.addEventListener("click", function () {
 //   pageLoad();
 // });
 function removeContent() {
-  const parent = document.getElementById("content");
-
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
+  const parent = document.querySelector("#content");
+  const currentPage = document.querySelector("currentPage");
+  if (currentPage) {
+    parent.removeChild(currentPage);
   }
 }
