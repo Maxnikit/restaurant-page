@@ -1,3 +1,4 @@
+import mascot from "../src/assets/mascot.png";
 export function loadHome() {
   const content = document.getElementById("content");
   const homePage = document.createElement("div");
@@ -13,7 +14,7 @@ export function loadHome() {
   homePage.id = "homePage";
   header.textContent = "Durrr Burger";
   image.id = "mascot";
-  image.src = "../src/assets/mascot.png";
+  image.src = mascot;
   image.width = "400";
   description.id = "homeDescription";
   description.textContent =
