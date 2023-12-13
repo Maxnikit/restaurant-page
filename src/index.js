@@ -30,8 +30,17 @@ contactButton.addEventListener("click", function () {
 
 function removeContent() {
   const parent = document.querySelector("#content");
-  const currentPage = document.querySelector("currentPage");
-  if (currentPage) {
-    parent.removeChild(currentPage);
+  const homePage = document.querySelector("#homePage");
+  const menuPage = document.querySelector("#menuPage");
+  const contactPage = document.querySelector("#contactPage");
+
+  if (homePage) {
+    parent.removeChild(homePage);
+  }
+  if (menuPage) {
+    parent.removeChild(menuPage);
+  }
+  if (contactPage) {
+    parent.removeChild(contactPage);
   }
 }

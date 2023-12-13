@@ -1,13 +1,13 @@
 export function loadMenu() {
   const content = document.getElementById("content");
-  const currentPage = document.createElement("currentPage");
+  const menuPage = document.createElement("div");
   const header = document.createElement("h1");
 
+  menuPage.id = "menuPage";
   header.textContent = "Menu";
-
-  currentPage.appendChild(header);
+  menuPage.appendChild(header);
   displayMenu();
-  content.appendChild(currentPage);
+  content.appendChild(menuPage);
   function displayMenu() {
     const foodArray = [
       {
@@ -70,7 +70,7 @@ export function loadMenu() {
       card.appendChild(image);
       card.appendChild(description);
 
-      currentPage.appendChild(card);
+      menuPage.appendChild(card);
     }
   }
 }

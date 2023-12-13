@@ -18,6 +18,7 @@ body {
   width: 100%;
   /* width: calc(100vw - 34px); */
   margin: 0;
+  background-color: var(--secondary-color);
 }
 
 nav {
@@ -42,20 +43,70 @@ nav > button {
   cursor: pointer;
   transition: 0.3s;
 }
-currentPage {
+#homePage,
+#menuPage,
+#contactPage {
   width: 800px;
-
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: var(--third-color);
   color: white;
   font-size: 30px;
+  padding: 10px;
 }
-body {
-  background-color: var(--secondary-color);
+#homePage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
 }
+#homePage > h1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: center;
+}
+#homePage > #mascot {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#homePage > #homeDescription {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-size: 26px;
+}
+#homePage > #hoursHeader {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+#homePage > #location {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+#homePage > #map {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+#homePage > #hours > p {
+  margin: 0;
+}
+#menuPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contactPage {
+}
+
 .menu-card {
   display: grid;
   grid-template-columns: auto 250px;

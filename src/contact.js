@@ -1,8 +1,10 @@
 export function loadContact() {
   const content = document.getElementById("content");
-  const currentPage = document.createElement("currentPage");
+  const contactPage = document.createElement("div");
   const contact = document.createElement("h1");
+
+  contactPage.id = "contactPage";
   contact.textContent = "Contact us";
-  currentPage.appendChild(contact);
-  content.appendChild(currentPage);
+  contactPage.appendChild(contact);
+  content.appendChild(contactPage);
 }
