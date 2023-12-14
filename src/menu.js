@@ -14,7 +14,7 @@ export function loadMenu() {
       {
         name: "French Bowl",
         price: 200,
-        image: "../src/assets/frenchBowl.png",
+        image: require("../src/assets/frenchBowl.png"),
         description:
           "Indulge in a bowl brimming with golden, crispy french fries, seasoned to perfection for a savory delight.",
       },
