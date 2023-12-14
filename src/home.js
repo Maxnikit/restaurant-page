@@ -27,7 +27,7 @@ export function loadHome() {
   location.id = "location";
   location.textContent = "Location: Chapter 1, Greasy Grove";
   map.id = "map";
-  map.src = { map };
+  map.src = map;
   map.width = "300";
 
   homePage.appendChild(header);
