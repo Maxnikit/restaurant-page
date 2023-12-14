@@ -1,3 +1,6 @@
+import femaleImage from "../src/assets/female.png";
+import maleImage from "../src/assets/male.png";
+
 export function loadContact() {
   const content = document.getElementById("content");
   const contactPage = document.createElement("div");
@@ -12,10 +15,10 @@ export function loadContact() {
   header.classList = "header";
   header.textContent = "Contact us";
   female.id = "female";
-  female.src = "../src/assets/female.png";
+  female.src = femaleImage;
   female.width = "250";
   male.id = "male";
-  male.src = "../src/assets/male.png";
+  male.src = maleImage;
   male.width = "250";
   invite.id = "invite";
   invite.textContent =
