@@ -1,4 +1,6 @@
 import mascot from "../src/assets/mascot.png";
+import map from "../src/assets/map.png";
+
 export function loadHome() {
   const content = document.getElementById("content");
   const homePage = document.createElement("div");
@@ -25,7 +27,7 @@ export function loadHome() {
   location.id = "location";
   location.textContent = "Location: Chapter 1, Greasy Grove";
   map.id = "map";
-  map.src = " ../src/assets/map.png";
+  map.src = { map };
   map.width = "300";
 
   homePage.appendChild(header);
